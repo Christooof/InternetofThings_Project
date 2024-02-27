@@ -5,7 +5,7 @@
 
   PART A
 
-/*
+*/
 
 /*
 Pins 2-6 are used for the 5 lamps. Thereby the middle lamp has to be attached to pin 4.
