@@ -1,4 +1,13 @@
 /*
+  Exercise 13: Catch the LED game
+  Hand in: 03-03-2024
+  Made by: Carla Soleta (s222824), Christof Haye s222577, and Emil Thomsen Øberg (s184164)
+
+  PART A
+
+/*
+
+/*
 Pins 2-6 are used for the 5 lamps. Thereby the middle lamp has to be attached to pin 4.
 Pin 8 is used for the button. From the button on cable has to go to GND.
 */
