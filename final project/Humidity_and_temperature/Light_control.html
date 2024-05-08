@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mode and Brightness Control</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+    .box {
+      width: 45%;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .mode-btn {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h2>Mode</h2>
+      <p><span id="mode-display">None</span></p>
+      <button class="mode-btn" onclick="updateMode(1)">1</button>
+      <button class="mode-btn" onclick="updateMode(2)">2</button>
+      <button class="mode-btn" onclick="updateMode(3)">3</button>
+      <button class="mode-btn" onclick="updateMode(4)">4</button>
+      <button class="mode-btn" onclick="updateMode(5)">5</button>
+    </div>
+    <div class="box">
+      <h2>Brightness</h2>
+      <p>Current Brightness: <span id="brightness-display">50</span></p>
+      <input type="range" min="1" max="100" value="50" oninput="updateBrightness(this.value)">
+    </div>
+  </div>
+  
+  <button onclick="submitValues()">Submit Values</button>
+
+  <script>
+    function updateMode(mode) {
+      document.getElementById('mode-display').innerText = mode;
+    }
+
+    function updateBrightness(value) {
+      document.getElementById('brightness-display').innerText = value;
+    }
+
+    function submitValues() {
+      var mode = document.getElementById('mode-display').innerText;
+      var brightness = document.getElementById('brightness-display').innerText;
+
+      var url = 'https://api.thingspeak.com/update?api_key=FRDY6BER0VFWN2FZ&field5=' + mode + '&field6=' + brightness;
+
+      // Make the AJAX POST request
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url, true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            console.log('Values submitted successfully.');
+          } else {
+            console.error('Error submitting values:', xhr.statusText);
+          }
+        }
+      };
+
+      xhr.send();
+    }
+  </script>
+</body>
+</html>
+
