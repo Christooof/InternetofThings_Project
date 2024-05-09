@@ -3,6 +3,9 @@
 ### User Dashboard
 https://thingspeak.com/channels/2496158
 
+### Backend for lightning controls
+https://thingspeak.com/channels/2504240
+
 The interface to control the lights is in: Humidity_and_temperature/Light_control.html
 
 ### Link to Water tank Thinkspeak (which now has been made public, but was private before)
