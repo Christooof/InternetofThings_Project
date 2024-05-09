@@ -11,16 +11,16 @@ https://thingspeak.com/channels/2504191
 
 ## Libraries used in the code
 ### ESP 
-https://www.arduinolibraries.info/libraries/redis-for-arduino
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 
 ### DHT11
-https://www.arduinolibraries.info/libraries/dht11
+https://www.arduino.cc/reference/en/libraries/dht-sensor-library/
 
 ### LCD
-https://www.arduinolibraries.info/libraries/liquid-crystal-i2-c
+https://www.arduino.cc/reference/en/libraries/liquidcrystal/
 
 ### Thingspeak
-https://www.arduinolibraries.info/libraries/thing-speak
+https://www.arduino.cc/reference/en/libraries/thingspeak/
 
 ### I2C
 https://www.arduino.cc/reference/en/language/functions/communication/wire/
