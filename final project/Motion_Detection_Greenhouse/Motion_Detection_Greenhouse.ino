@@ -3,13 +3,6 @@
 int pirPin = 8;
 int ledPin = 13;
 
-//reminder: adjust the two yellow crosses on Motion dector accoridng to sensibility (distance of detection & how long delay is)
-//right one (closer to black roll): distance between 1-7 meters
-//left one (lengths of bliking of lamp): time delay (5 sec)
-//high and low on motion detector: 
-//High (measures all the time motion - resets timer whenever new motion detected, : how can you switch, my sensor is missing something
-//low only measure once, runs timer and in that time new motion detection is blocked)
-
 // Create variables:
 int val = 0;
 bool motionState = false; // We start with no motion detected.
